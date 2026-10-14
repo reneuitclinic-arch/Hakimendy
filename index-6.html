@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hakim Endy Syman</title>
+<meta name="description" content="Mohammad Hakim Endy Syman — oil and gas Production Operator, web developer and founder of Cudola Co in Seria, Brunei. Experience, skills and ways to build or partner together.">
+<meta name="theme-color" content="#0F3D3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hakim Endy Syman — Plant operator, web builder, partner">
+<meta property="og:description" content="Oil and gas field operations, web development and Cudola Co. Based in Seria, Brunei.">
+<meta property="og:url" content="https://hakimendy.site/">
+<meta property="og:image" content="https://hakimendy.site/assets/img/me3.JPG">
+<link rel="canonical" href="https://hakimendy.site/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23F28C38'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='900' font-size='38' text-anchor='middle' fill='%230F3D3E'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: alternating night (black) and day (warm paper) bands; condensed uppercase headlines, flare-red accent; one flagship moment per band */
+:root{
+  --ink:#0F3D3E; --ink-2:#144A4B; --ink-3:#1A5455; --line-d:rgba(251,246,236,.14);
+  --paper:#F6F1E7; --paper-2:#ECE3D2; --line-l:rgba(28,43,43,.14);
+  --snow:#FBF6EC; --soft-d:#D3E2DE; --mute-d:#A3C2BC; --mute-l:#5B574E; --tx:#1C2B2B;
+  --acc:#F5A04F;     /* orange text/marks on teal */
+  --acc-btn:#F28C38; /* button fill; text on it uses --on-acc (4.9:1) */
+  --acc-btn-hi:#F59C52; --on-acc:#0F3D3E;
+  --acc-ink:#A44A0A; /* orange text on sand */
+  --foot:#0B2F30;
+  --ok:#7BE0A8;
+  --f-display:"Archivo","Arial Narrow",Impact,sans-serif;
+  --f-sans:"Geist","Helvetica Neue",Arial,system-ui,sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--snow);font-family:var(--f-sans);font-size:16px;line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* type */
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 12px;font-weight:500}
+.day .eyebrow{color:var(--acc-ink)}
+.h-xl,.h-lg,.h-md{font-family:var(--f-display);font-stretch:68%;font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.005em;margin:0;text-wrap:balance}
+.h-xl{font-size:clamp(3.2rem,8.6vw,6.8rem)}
+.h-lg{font-size:clamp(2.4rem,5.4vw,3.9rem)}
+.h-md{font-size:clamp(1.6rem,3vw,2.1rem);line-height:.95}
+.red{color:var(--acc)}
+.day .red{color:var(--acc-ink)}
+.lead{color:var(--soft-d);max-width:46ch;margin:18px 0 0}
+.day .lead{color:var(--mute-l)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 .82rem var(--f-sans);letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;border-radius:4px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,transform .2s}
+.btn svg{width:16px;height:16px}
+.btn.hot{background:var(--acc-btn);color:var(--on-acc)}
+.btn.hot:hover{background:var(--acc-btn-hi);transform:translateY(-1px)}
+.btn.line{border-color:var(--line-d);color:var(--snow)}
+.btn.line:hover{border-color:var(--acc)}
+.btn.text{padding-inline:4px;color:var(--snow)}
+.btn.text:hover{color:var(--acc)}
+.day .btn.line{border-color:var(--line-l);color:var(--tx)}
+
+/* bands */
+.night{background:var(--ink);color:var(--snow)}
+.day{background:var(--paper);color:var(--tx)}
+.band{padding-block:clamp(56px,8vw,96px)}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(15,61,62,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-stretch:75%;font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:.02em}
+.brand b{display:grid;place-items:center;width:30px;height:30px;border-radius:6px;background:var(--acc-btn);color:var(--on-acc);font-size:.95rem}
+nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 12px;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--mute-d);border-bottom:2px solid transparent}
+nav a:hover{color:var(--snow)}
+nav a.on{color:var(--acc);border-bottom-color:var(--acc)}
+.top .btn{padding:10px 14px;background:transparent;border-color:var(--acc);color:var(--snow)}
+.top .btn:hover{background:var(--acc-btn)}
+.top .btn svg{color:var(--acc)}
+.top .btn:hover svg{color:var(--on-acc)}
+@media (max-width:900px){
+  nav{order:3;flex-basis:100%;min-width:0}
+  nav ul{overflow-x:auto;scrollbar-width:none}
+  nav ul::-webkit-scrollbar{display:none}
+}
+
+/* hero — Motionix-style: copy left on a rail, portrait emerging from the dark on the right */
+.hero{position:relative;overflow:hidden;min-height:clamp(560px,46vw,680px);display:flex;align-items:center;
+  background:radial-gradient(60% 80% at 78% 45%,rgba(242,140,56,.16),transparent 60%),var(--ink)}
+.hero-art{position:absolute;inset:0;pointer-events:none}
+.orbits{position:absolute;right:max(-60px,calc(50% - 680px));top:50%;width:min(52vw,640px);height:auto;transform:translateY(-50%)}
+.orbits ellipse{fill:none;stroke:rgba(255,255,255,.16);stroke-width:1}
+.orbits .dash{stroke-dasharray:2 8;stroke:rgba(255,255,255,.12)}
+.orbits .dot{fill:var(--acc)}
+.portrait{position:absolute;right:max(0px,calc(50% - 600px));bottom:0;width:min(40vw,500px);height:100%;
+  -webkit-mask-image:radial-gradient(closest-side at 50% 52%,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side at 50% 52%,#000 62%,transparent 100%)}
+.portrait img,.portrait .sil{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.portrait img{filter:saturate(.9) brightness(.92)}
+.stroke{position:absolute;fill:var(--acc-btn);mix-blend-mode:normal}
+.stroke.s1{right:max(30px,calc(50% - 520px));top:80%;width:min(30vw,380px);height:58px;opacity:.95;transform:rotate(-5deg)}
+.stroke.s2{right:max(-10px,calc(50% - 600px));top:88%;width:min(18vw,220px);height:30px;opacity:.7;transform:rotate(-3deg)}
+.hero-grid{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:36px minmax(0,1fr);align-items:center;column-gap:clamp(16px,3vw,36px);padding-block:56px}
+.rail{align-self:stretch;display:flex;flex-direction:column;align-items:center;gap:14px}
+.rail::before,.rail::after{content:"";flex:1;width:1px;background:var(--line-d)}
+.rail span{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute-d)}
+.hero-copy{min-width:0;max-width:600px}
+.h-hero{font-family:var(--f-display);font-stretch:66%;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:-.005em;margin:0;font-size:clamp(3rem,6.4vw,5.6rem)}
+.h-hero span{display:block;white-space:nowrap}
+.hero-copy .lead{max-width:42ch;font-size:.98rem}
+.hero-copy .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.shift{display:inline-flex;align-items:center;gap:14px;text-decoration:none;font-size:.8rem;margin-top:30px;grid-column:2;justify-self:start}
+.shift .ring-btn{width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.5);display:grid;place-items:center}
+.shift .ring-btn i{width:10px;height:10px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(78,211,138,.18),0 0 14px var(--ok)}
+.shift b{display:block;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.76rem}
+.shift small{color:var(--mute-d);font-size:.76rem}
+.shift:hover .ring-btn{border-color:var(--acc)}
+@media (max-width:860px){
+  .hero{flex-direction:column;align-items:stretch;min-height:0}
+  .hero-art{position:relative;order:2;height:360px;inset:auto}
+  .orbits{right:auto;left:50%;transform:translate(-50%,-50%);width:min(110vw,460px)}
+  .portrait{right:auto;left:50%;transform:translateX(-50%);width:min(80vw,340px)}
+  .stroke.s1{right:auto;left:10%;width:62%;top:82%}
+  .stroke.s2{right:8%;width:34%;top:90%}
+  .hero-grid{grid-template-columns:1px minmax(0,1fr);padding-block:40px 8px}
+  .rail span{display:none}
+  .h-hero{font-size:clamp(2.6rem,11.5vw,4rem)}
+}
+
+/* stats bar */
+.statsbar{position:relative;z-index:2;margin-top:-1px;padding-block:28px 0}
+.statsbar ul{list-style:none;margin:0;padding:22px clamp(12px,3vw,28px);display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border:1px solid var(--line-d);border-radius:22px;background:linear-gradient(180deg,var(--ink-3),var(--ink-2))}
+.statsbar li{text-align:center;min-width:0}
+.statsbar strong{display:block;font-family:var(--f-display);font-stretch:70%;font-weight:800;font-size:clamp(2rem,4vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.statsbar strong em{font-style:normal;color:var(--acc)}
+.statsbar span{font-size:.8rem;color:var(--mute-d)}
+@media (max-width:420px){.statsbar strong{font-size:1.8rem}.statsbar span{font-size:.72rem}}
+
+/* client strip — static, quiet */
+.clients{padding-block:40px 56px}
+.clients .inner{border-top:1px solid var(--line-d);padding-top:24px;display:grid;gap:14px}
+.clients .eyebrow{margin:0;color:var(--mute-d);text-align:center}
+.clients ul{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 22px;list-style:none;margin:0;padding:0}
+.clients li{font-family:var(--f-display);font-stretch:75%;font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:1rem;color:var(--mute-d);white-space:nowrap}
+@media (max-width:900px){.clients ul{justify-content:center;gap:8px 20px}.clients li{font-size:.92rem}}
+
+/* about (day) */
+.about{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.1fr) minmax(0,.7fr);gap:clamp(24px,4vw,48px);align-items:center}
+.about>*{min-width:0}
+.about-pic{position:relative;aspect-ratio:1/1.05;max-width:100%}
+.about-pic .blob{position:absolute;left:0;top:6%;width:72%;aspect-ratio:1;border-radius:50%;background:var(--acc-btn)}
+.about-pic .shot{position:absolute;right:0;bottom:0;width:78%;height:92%;overflow:hidden;border-radius:6px;background:var(--ink-3)}
+.about-pic .shot img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.about-pic .shot .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:6rem;color:rgba(251,246,236,.25)}
+.about-pic .badge{position:absolute;z-index:2;right:0;bottom:18px;background:var(--ink);color:var(--snow);padding:16px 18px;border-radius:4px}
+.about-pic .badge strong{display:block;font-family:var(--f-display);font-stretch:70%;font-weight:800;font-size:2.6rem;line-height:1;color:var(--acc)}
+.about-pic .badge span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.about p{margin:14px 0 0;color:var(--mute-l);max-width:52ch}
+.about p.edu{font-size:.86rem;border-top:1px solid var(--line-l);padding-top:14px;margin-top:20px}
+.about p.edu b{color:var(--tx);font-weight:600}
+.kpis{list-style:none;margin:0;padding:0;display:grid}
+.kpis li{display:flex;gap:14px;align-items:center;padding-block:16px;border-bottom:1px solid var(--line-l)}
+.kpis li:last-child{border-bottom:0}
+.kpis svg{color:var(--acc-ink);width:26px;height:26px}
+.kpis strong{display:block;font-family:var(--f-display);font-stretch:70%;font-weight:800;font-size:1.9rem;line-height:1}
+.kpis span{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute-l)}
+@media (max-width:980px){.about{grid-template-columns:1fr 1fr}.kpis{grid-column:1/-1;grid-template-columns:repeat(3,1fr);gap:12px}.kpis li{border-bottom:0;border-top:1px solid var(--line-l)}}
+@media (max-width:640px){.about{grid-template-columns:1fr}.about-pic{max-width:420px}.kpis{grid-template-columns:1fr}}
+
+/* section header row */
+.sec-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.sec-row>div{min-width:0}
+.sec-row .side{max-width:34ch;font-size:.92rem;color:var(--mute-d)}
+.day .sec-row .side{color:var(--mute-l)}
+.sec-row .side a{display:inline-flex;align-items:center;gap:8px;margin-top:10px;color:var(--acc);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.day .sec-row .side a{color:var(--acc-ink)}
+
+/* skills cards */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skill{padding:24px 22px;border:1px solid var(--line-d);border-radius:6px;background:var(--ink-2);display:flex;flex-direction:column;gap:12px;min-width:0;transition:border-color .2s,transform .2s}
+.skill:hover{border-color:rgba(242,140,56,.65);transform:translateY(-2px)}
+.skill .ic{width:46px;height:46px;border-radius:6px;border:1px solid rgba(242,140,56,.55);display:grid;place-items:center;color:var(--acc)}
+.skill h3{font-family:var(--f-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:1.25rem;letter-spacing:.01em;margin:6px 0 0;line-height:1.05}
+.skill p{margin:0;color:var(--mute-d);font-size:.9rem;flex:1}
+.skill ul{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.skill li{font-size:.72rem;padding:4px 9px;border-radius:999px;border:1px solid var(--line-d);color:var(--soft-d)}
+@media (max-width:980px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
+
+/* work together (tabs) */
+.together{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,4vw,56px);align-items:start}
+.together>*{min-width:0}
+.opts{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:10px}
+.opt{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-radius:999px;border:1px solid var(--line-d);background:transparent;color:var(--snow);font:600 .9rem var(--f-sans);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-align:left;transition:background .2s,border-color .2s}
+.opt small{font-family:var(--f-mono);font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--mute-d);font-size:.78rem;margin-left:10px}
+.opt:hover{border-color:var(--acc)}
+.opt[aria-selected="true"]{background:var(--snow);color:var(--tx);border-color:var(--snow)}
+.opt[aria-selected="true"] small{color:var(--mute-l)}
+.panes{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+.pane{grid-column:1;padding:28px;border-radius:18px;border:1px solid var(--line-d);background:linear-gradient(180deg,var(--ink-3),var(--ink-2));min-height:100%}
+.pane h3{margin:0 0 12px}
+.pane p{margin:0 0 18px;color:var(--soft-d);font-size:.95rem}
+.pane ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.pane li{font-size:.8rem;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line-d)}
+.stack{grid-column:2;display:grid;gap:14px;align-content:start}
+.stack .q{padding:20px;border-radius:18px;border:1px solid var(--line-d);background:var(--ink-2);font-size:.88rem;color:var(--mute-d)}
+.stack .q b{display:block;color:var(--snow);font-family:var(--f-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:1.15rem;margin-top:10px;line-height:1.05}
+.stack .go{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:20px;border-radius:18px;background:var(--acc-btn);color:var(--on-acc);text-decoration:none;min-height:170px}
+.stack .go span{font-size:.86rem}
+.stack .go b{display:flex;align-items:center;justify-content:space-between;font-family:var(--f-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:1.3rem;line-height:1}
+.stack .go b i{width:40px;height:40px;border-radius:50%;background:var(--on-acc);color:var(--acc-btn);display:grid;place-items:center;font-style:normal}
+.stack .go:hover{background:var(--acc-btn-hi)}
+@media (max-width:980px){.together{grid-template-columns:1fr}}
+@media (max-width:420px){.opt small{display:none}}
+@media (max-width:560px){.panes{grid-template-columns:1fr}.stack{grid-column:1;grid-template-columns:1fr 1fr}.stack .go{min-height:140px}}
+@media (max-width:380px){.stack{grid-template-columns:1fr}}
+
+/* projects (day) */
+.projects{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.proj{text-decoration:none;color:var(--tx);min-width:0;display:block}
+.proj .thumb{position:relative;aspect-ratio:4/3;max-width:100%;border-radius:6px;overflow:hidden;background:radial-gradient(90% 90% at 80% 100%,rgba(242,140,56,.5),transparent 60%),var(--ink)}
+.proj .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s}
+.proj .thumb span{position:absolute;left:14px;bottom:12px;font-family:var(--f-display);font-stretch:70%;font-weight:800;text-transform:uppercase;font-size:1.5rem;color:var(--snow)}
+.proj h3{font-family:var(--f-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:1.1rem;margin:12px 0 0;letter-spacing:.01em}
+.proj p{margin:2px 0 0;font-size:.84rem;color:var(--mute-l)}
+.proj .go{display:inline-flex;gap:6px;margin-top:6px;font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--acc-ink)}
+@media (max-width:900px){.projects{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.projects{gap:18px 12px}.proj .thumb span{font-size:1.1rem;left:10px;bottom:8px}.proj p{font-size:.78rem}}
+@media (max-width:330px){.projects{grid-template-columns:1fr}}
+
+/* journey */
+.journey{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,.75fr);gap:28px;align-items:center}
+.journey>*{min-width:0}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.tl::before{content:"";position:absolute;left:10%;right:10%;top:30px;border-top:1px dashed rgba(255,255,255,.25)}
+.tl li{position:relative;text-align:center;padding-inline:6px;min-width:0}
+.tl .node{position:relative;width:60px;height:60px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:var(--ink);border:1px solid rgba(242,140,56,.65);color:var(--acc)}
+.tl li.cur .node{background:var(--acc-btn);color:var(--on-acc);border-color:var(--acc-btn);box-shadow:0 0 0 6px rgba(242,140,56,.2)}
+.tl .yr{display:block;font-family:var(--f-mono);font-size:.72rem;color:var(--mute-d);font-variant-numeric:tabular-nums}
+.tl b{display:block;font-family:var(--f-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:1rem;line-height:1.05;margin-top:6px}
+.tl small{display:block;font-size:.78rem;color:var(--mute-d);margin-top:4px}
+.hl{border:1px solid var(--line-d);border-radius:6px;padding:8px 22px;background:var(--ink-2)}
+.hl>div{display:flex;gap:14px;align-items:flex-start;padding-block:16px;border-bottom:1px solid var(--line-d)}
+.hl>div:last-child{border-bottom:0}
+.hl svg{color:var(--acc);width:28px;height:28px;margin-top:2px}
+.hl b{display:block;font-family:var(--f-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:1rem;line-height:1.1}
+.hl span{display:block;margin-top:4px;font-size:.82rem;color:var(--mute-d)}
+.detail{margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.detail>div{padding:24px;border:1px solid var(--line-d);border-radius:6px;min-width:0}
+.detail h3{margin:0 0 10px;font-family:var(--f-mono);font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.detail ul{margin:0;padding-left:18px;color:var(--soft-d);font-size:.9rem}
+.detail li{margin-bottom:6px}
+.detail li b{color:var(--snow);font-weight:600}
+.detail .past{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.detail .past p{margin:0;font-size:.86rem;color:var(--soft-d)}
+.detail .past b{display:block;color:var(--snow);font-weight:600;margin-bottom:4px}
+@media (max-width:980px){.journey{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .tl{grid-template-columns:1fr;gap:18px}
+  .tl::before{left:30px;right:auto;top:10px;bottom:10px;border-top:0;border-left:1px dashed rgba(255,255,255,.25)}
+  .tl li{display:grid;grid-template-columns:60px 1fr;column-gap:16px;text-align:left;align-items:center;padding:0}
+  .tl .node{margin:0;grid-row:span 3}
+  .detail,.detail .past{grid-template-columns:1fr}
+}
+
+/* certificates (day) */
+.certs-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px;align-items:start}
+.certs-grid>*{min-width:0}
+.table-scroll{overflow-x:auto;border:1px solid var(--line-l);border-radius:6px;background:#FFFCF6}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:540px}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line-l);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--f-mono);font-size:.68rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mute-l);background:var(--paper-2)}
+td .code{display:block;font-family:var(--f-mono);font-size:.72rem;color:var(--mute-l);margin-top:2px}
+td.date{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:600;white-space:nowrap;color:#1E7A46}
+.st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.st.due{color:#9A5300}
+.note{font-size:.8rem;color:var(--mute-l);margin:10px 0 0}
+.kit{display:grid;gap:14px}
+.kit>div{padding:22px;border-radius:6px;background:var(--ink);color:var(--snow)}
+.kit h3{margin:0 0 14px;font-family:var(--f-mono);font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.kit ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.kit li{font-size:.8rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line-d);color:var(--soft-d)}
+@media (max-width:900px){.certs-grid{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:40px;align-items:center}
+.faq>*{min-width:0}
+details{border-bottom:1px solid var(--line-d)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;cursor:pointer;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--acc);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:var(--soft-d);font-size:.93rem;max-width:62ch}
+.qmark{position:relative;aspect-ratio:1;max-width:100%;display:grid;place-items:center}
+.qmark::before{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(242,140,56,.5),transparent 65%);filter:blur(10px)}
+.qmark span{position:relative;font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:clamp(9rem,22vw,16rem);line-height:1;color:transparent;-webkit-text-stroke:2px var(--acc)}
+@media (max-width:820px){.faq{grid-template-columns:1fr}.qmark{display:none}}
+
+/* contact (day) */
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr);gap:clamp(24px,4vw,44px);align-items:start}
+.contact>*{min-width:0}
+.rows{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
+.rows li{display:flex;align-items:center;gap:12px;font-size:.92rem}
+.rows svg{color:var(--acc-ink)}
+.rows .val{flex:1;min-width:0;overflow-wrap:anywhere;text-decoration:none}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .full{grid-column:1/-1}
+label{display:block;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute-l);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:.92rem;color:var(--tx);background:#FFFCF6;border:1px solid var(--line-l);border-radius:4px;padding:11px 12px;color-scheme:light}
+textarea{min-height:120px;resize:vertical}
+.send-row{grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.send-row p{margin:0;font-size:.78rem;color:var(--mute-l);flex:1;min-width:180px}
+.c-pic{position:relative;aspect-ratio:3/4;max-width:100%}
+.c-pic .blob{position:absolute;left:8%;bottom:6%;width:84%;aspect-ratio:1;border-radius:50%;background:var(--acc-btn)}
+.c-pic .shot{position:absolute;inset:0 0 0 10%;overflow:hidden;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
+.c-pic img{width:100%;height:100%;object-fit:cover}
+@media (max-width:980px){.contact{grid-template-columns:1fr 1fr}.c-pic{display:none}}
+@media (max-width:680px){.contact{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--foot);color:var(--snow)}
+footer .wrap{padding-block:48px 28px}
+.f-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,.6fr));gap:28px}
+.f-top>*{min-width:0}
+.f-brand{font-family:var(--f-display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(2rem,5vw,3.2rem);line-height:.95;margin:0}
+.f-top p{margin:12px 0 0;max-width:40ch;font-size:.9rem}
+.f-top h3{margin:0 0 12px;color:var(--acc);font-family:var(--f-mono);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.f-top ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.9rem}
+.f-top a{text-decoration:none}
+.f-top a:hover{text-decoration:underline}
+.f-bot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.3);font-size:.8rem}
+@media (max-width:640px){.f-top{grid-template-columns:1fr 1fr}.f-top>div:first-child{grid-column:1/-1}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skill,.btn,.proj .thumb img{transition:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-valve" viewBox="0 0 24 24"><path d="M3 15h4l5-3 5 3h4M3 12v6M21 12v6M12 12V7M8 5h8"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M14.5 6.5L17 4"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="13" rx="1.5"/><path d="M8 8h8M8 11h5"/><path d="M10 16l-1 5 3-2 3 2-1-5"/></symbol>
+    <symbol id="i-laurel" viewBox="0 0 24 24"><path d="M7 20c-3-3-4-8-1-12M17 20c3-3 4-8 1-12M5 13l2 1M4 10l2 .5M19 13l-2 1M20 10l-2 .5M12 6l1.2 2.4 2.6.4-1.9 1.8.5 2.6L12 12l-2.4 1.2.5-2.6-1.9-1.8 2.6-.4z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>H</b>Hakim Endy</a>
+    <nav aria-label="Sections"><ul>
+      <li><a class="on" href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#together">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#journey">Experience</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="btn hot" href="#contact">Let's talk <svg class="i"><use href="#i-arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="night hero">
+    <div class="hero-art" aria-hidden="true">
+      <svg class="orbits" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+        <ellipse cx="300" cy="300" rx="285" ry="285"/>
+        <ellipse cx="300" cy="300" rx="290" ry="120" transform="rotate(-24 300 300)"/>
+        <ellipse cx="300" cy="300" rx="250" ry="250" class="dash"/>
+        <circle cx="548" cy="186" r="4" class="dot"/>
+        <circle cx="70" cy="420" r="3" class="dot"/>
+      </svg>
+      <div class="portrait">
+        <svg class="sil" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice">
+          <defs><linearGradient id="silg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a5654"/><stop offset=".55" stop-color="#262423"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient></defs>
+          <path fill="url(#silg)" d="M136 196c0-54 32-92 74-92s74 38 74 92c0 58-30 100-74 100s-74-42-74-100zM178 280h64v50h-64zM30 480c6-100 70-158 180-164 110 6 174 64 180 164z"/>
+          <path fill="#4a4644" d="M128 170c4-60 40-100 82-100s78 40 82 100z"/>
+          <path fill="#3a3736" d="M100 166h220c8 0 10 12 2 14l-20 6H118l-20-6c-8-2-6-14 2-14z"/>
+          <path fill="none" stroke="#5c5856" stroke-width="5" d="M210 72v94M186 80c-4 24-6 52-6 86M234 80c4 24 6 52 6 86"/>
+        </svg>
+        <img src="assets/img/me3.JPG" alt="" onerror="this.remove()">
+      </div>
+      <svg class="stroke s1" viewBox="0 0 520 120" preserveAspectRatio="none">
+        <defs><filter id="rough" x="-5%" y="-30%" width="110%" height="160%"><feTurbulence type="fractalNoise" baseFrequency="0.035 0.6" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="22"/></filter></defs>
+        <path filter="url(#rough)" d="M10 70 C 120 30, 300 20, 510 46 L 500 82 C 330 66, 150 76, 18 104 Z"/>
+      </svg>
+      <svg class="stroke s2" viewBox="0 0 520 120" preserveAspectRatio="none"><path filter="url(#rough)" d="M10 60 C 160 40, 330 44, 510 58 L 504 78 C 340 70, 170 70, 16 86 Z"/></svg>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="rail" aria-hidden="true"><span>Seria · Brunei</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Production Operator &amp; web developer</p>
+        <h1 class="h-hero"><span>Plant operator.</span><span>Web builder.</span><span class="red">Your partner.</span></h1>
+        <p class="lead">Four years working inside oil and gas plants, onshore and offshore. Before that, web developer and Head of IT. Now I build the digital side of businesses through Cudola Co.</p>
+        <div class="cta">
+          <a class="btn hot" href="#work">View my work <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a class="btn text" href="#about">About me <svg class="i"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <a class="shift" href="#contact">
+        <span class="ring-btn"><i></i></span>
+        <span><b>Open to projects</b><small>Seria, Brunei</small></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="night statsbar">
+    <div class="wrap">
+      <ul>
+        <li><strong>4<em>+</em></strong><span>Years in oil &amp; gas</span></li>
+        <li><strong>8</strong><span>Field certificates</span></li>
+        <li><strong>4</strong><span>Websites shipped</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CLIENT STRIP -->
+  <div class="night clients">
+    <div class="wrap"><div class="inner">
+      <span class="eyebrow">Worked with</span>
+      <ul>
+        <li>Hibiscus Petroleum</li><li>SPIE ETS</li><li>Exceltech Solution</li><li>Unitea Cafe</li><li>Mint Sdn Bhd</li><li>BIBD YES!</li><li>GramGroup</li><li>Enevo Brunei</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- ABOUT (day) -->
+  <section class="day band" id="about">
+    <div class="wrap about">
+      <div class="about-pic">
+        <div class="blob"></div>
+        <div class="shot"><span class="ph" aria-hidden="true">HE</span><img src="assets/img/me.jpg" alt="Hakim Endy" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="badge"><strong>4+</strong><span>Years on shift</span></div>
+      </div>
+      <div>
+        <p class="eyebrow">About me</p>
+        <h2 class="h-lg">Safe plants.<br>Solid <span class="red">websites.</span></h2>
+        <p>I work shift operations at SPIE ETS, based at Hibiscus Petroleum, inside the onshore gas plant and out on the offshore wells. Amine treating, condensate stabilization, 3-phase separation, pigging and high-pressure equipment are my day-to-day.</p>
+        <p>Before the plant, I was a web developer and then Head of IT for a café group. Plant work taught me discipline: follow the procedure, watch the numbers, stay calm when things trip. I bring that to every project.</p>
+        <p class="edu"><b>Education:</b> HNTec in Information Technology, IBTE Jefri Bolkiah (GPA 3.5) · GCE O Level, Anthony Abell College (6 O Levels)</p>
+      </div>
+      <ul class="kpis">
+        <li><svg class="i"><use href="#i-gauge"/></svg><div><strong>4+</strong><span>Years onshore &amp; offshore</span></div></li>
+        <li><svg class="i"><use href="#i-cert"/></svg><div><strong>8</strong><span>Active field certificates</span></div></li>
+        <li><svg class="i"><use href="#i-code"/></svg><div><strong>4</strong><span>Websites shipped</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS (night) -->
+  <section class="night band" id="skills">
+    <div class="wrap">
+      <div class="sec-row">
+        <div><p class="eyebrow">What I do</p><h2 class="h-lg">Skills I bring</h2></div>
+        <div class="side">Two worlds, one standard: do it safely, do it properly.<br><a href="#together">Ways to work together <svg class="i" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="skills">
+        <article class="skill">
+          <div class="ic"><svg class="i"><use href="#i-valve"/></svg></div>
+          <h3>Plant operations</h3>
+          <p>Amine treating, condensate stabilization (RVP), 3-phase separation, pigging and well testing.</p>
+          <ul><li>H₂S/CO₂</li><li>RVP</li><li>SFP/SFT</li><li>Pigging</li></ul>
+        </article>
+        <article class="skill">
+          <div class="ic"><svg class="i"><use href="#i-shield"/></svg></div>
+          <h3>Safety &amp; emergency response</h3>
+          <p>Trip and interlock systems, process upsets, ERT, confined space and breathing apparatus.</p>
+          <ul><li>OPITO ERT</li><li>BOSIET</li><li>Confined space</li></ul>
+        </article>
+        <article class="skill">
+          <div class="ic"><svg class="i"><use href="#i-code"/></svg></div>
+          <h3>Web development</h3>
+          <p>Responsive business websites, booking and ordering pages, and structured logging for audit.</p>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </article>
+        <article class="skill">
+          <div class="ic"><svg class="i"><use href="#i-server"/></svg></div>
+          <h3>IT setup &amp; support</h3>
+          <p>Network infrastructure, data backup and disaster recovery, day-to-day technical support.</p>
+          <ul><li>Networks</li><li>Backups</li><li>Recovery</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK TOGETHER (night, tabs) -->
+  <section class="night band" id="together" style="padding-top:0">
+    <div class="wrap together">
+      <div>
+        <p class="eyebrow">Services</p>
+        <h2 class="h-lg">Build, join<br>or <span class="red">partner</span></h2>
+        <p class="lead">Need a website, an extra pair of hands, or a partner for a new idea? Pick what fits.</p>
+        <ul class="opts" role="tablist" aria-label="Ways to work together">
+          <li role="presentation"><button class="opt" id="tab-build" role="tab" aria-selected="true" aria-controls="pane">Build <small>Website &amp; IT</small><svg class="i"><use href="#i-arrow"/></svg></button></li>
+          <li role="presentation"><button class="opt" id="tab-join" role="tab" aria-selected="false" aria-controls="pane">Join <small>Your project or team</small><svg class="i"><use href="#i-arrow"/></svg></button></li>
+          <li role="presentation"><button class="opt" id="tab-partner" role="tab" aria-selected="false" aria-controls="pane">Partner <small>A new business</small><svg class="i"><use href="#i-arrow"/></svg></button></li>
+        </ul>
+      </div>
+      <div class="panes">
+        <div class="pane" id="pane" role="tabpanel" aria-live="polite">
+          <h3 class="h-md" id="pane-h">Your website &amp; IT setup</h3>
+          <p id="pane-p">Phone-friendly websites, booking and ordering pages, and IT set up properly for small businesses, cafés and shops in Brunei.</p>
+          <ul id="pane-c"><li>Business websites</li><li>Booking &amp; ordering pages</li><li>Email &amp; domain setup</li><li>Backup &amp; recovery</li></ul>
+        </div>
+        <div class="stack">
+          <div class="q">Not sure which fits?<b>Tell me the idea, I'll tell you honestly</b></div>
+          <a class="go" href="#contact"><span>Start the conversation</span><b>Let's talk <i><svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></i></b></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (day) -->
+  <section class="day band" id="work">
+    <div class="wrap">
+      <div class="sec-row">
+        <div><p class="eyebrow">My work</p><h2 class="h-lg">Selected projects</h2></div>
+        <div class="side">Client websites from my web development years, plus my final-year project at IBTE.</div>
+      </div>
+      <div class="projects">
+        <div class="proj">
+          <div class="thumb"><span>BIBD YES!</span><img src="assets/img/portfolio/Web 2.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <h3>BIBD YES!</h3><p>Youth banking website (no longer online)</p>
+        </div>
+        <div class="proj">
+          <div class="thumb"><span>GramGroup</span><img src="assets/img/portfolio/Web 3.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <h3>GramGroup</h3><p>Corporate group website (no longer online)</p>
+        </div>
+        <div class="proj">
+          <div class="thumb"><span>Enevo</span><img src="assets/img/portfolio/Web 4.png" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <h3>Enevo Brunei</h3><p>Company website (no longer online)</p>
+        </div>
+        <div class="proj">
+          <div class="thumb"><span>IBTE</span><img src="assets/img/portfolio/Web 1.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <h3>Interactive video site</h3><p>Final-year project, as appointed web developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY (night) -->
+  <section class="night band" id="journey">
+    <div class="wrap">
+      <p class="eyebrow">Journey &amp; achievements</p>
+      <h2 class="h-lg" style="margin-bottom:40px">Experience &amp; highlights</h2>
+      <div class="journey">
+        <ol class="tl">
+          <li><span class="node"><svg class="i"><use href="#i-cap"/></svg></span><div><span class="yr">2018 – 2020</span><b>HNTec in IT</b><small>IBTE Jefri Bolkiah</small></div></li>
+          <li><span class="node"><svg class="i"><use href="#i-code"/></svg></span><div><span class="yr">2020 – 2021</span><b>Web Developer</b><small>Mint Sdn Bhd</small></div></li>
+          <li><span class="node"><svg class="i"><use href="#i-server"/></svg></span><div><span class="yr">2021 – 2022</span><b>Head of IT</b><small>Unitea Cafe</small></div></li>
+          <li><span class="node"><svg class="i"><use href="#i-wrench"/></svg></span><div><span class="yr">2022</span><b>Mechanical Helper</b><small>Exceltech Solution</small></div></li>
+          <li class="cur"><span class="node"><svg class="i"><use href="#i-valve"/></svg></span><div><span class="yr">2022 – Present</span><b>Production Operator</b><small>SPIE ETS · Hibiscus</small></div></li>
+        </ol>
+        <div class="hl">
+          <div><svg class="i"><use href="#i-laurel"/></svg><div><b>Commissioning</b><span>Supported new equipment startups and commissioning</span></div></div>
+          <div><svg class="i"><use href="#i-bolt"/></svg><div><b>Emergency response team</b><span>OPITO-certified offshore ERT member</span></div></div>
+          <div><svg class="i"><use href="#i-shield"/></svg><div><b>Shutdowns &amp; startups</b><span>Planned plant shutdowns and startups with minimal disruption</span></div></div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <div>
+          <h3>Onshore gas process · amine &amp; stabilization</h3>
+          <ul>
+            <li><b>Amine treating:</b> circulation and temperature control to remove H₂S/CO₂ to pipeline spec.</li>
+            <li><b>Stabilization:</b> columns and reboilers to adjust RVP for safe condensate storage.</li>
+            <li><b>Equipment:</b> high-pressure pumps, compressors and filtration within trip and interlock limits.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Offshore production · wells</h3>
+          <ul>
+            <li><b>Wells:</b> monitored SFP/SFT and ran well tests through test separators.</li>
+            <li><b>Separation:</b> controlled 3-phase separators for oil, gas and water.</li>
+            <li><b>Pipelines:</b> pigging operations and wash pump strainer maintenance.</li>
+          </ul>
+        </div>
+        <div class="past">
+          <p><b>Mechanical Helper · Exceltech</b>Mechanical support across Mechanical, Instrumentation, HSE, Electrical and Systems teams, onshore and offshore.</p>
+          <p><b>Head of IT · Unitea Cafe</b>IT strategy, network infrastructure, day-to-day support, backup and disaster recovery.</p>
+          <p><b>Web Developer · Mint</b>Responsive client websites and structured logging for troubleshooting and audit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES (day) -->
+  <section class="day band" id="certificates">
+    <div class="wrap">
+      <div class="sec-row">
+        <div><p class="eyebrow">Training</p><h2 class="h-lg">Certified for the field</h2></div>
+        <div class="side">Status updates automatically. Amber means renewal is due within 12 months.</div>
+      </div>
+      <div class="certs-grid">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Certificates table">
+          <table>
+            <thead><tr><th>Certificate</th><th>Provider</th><th>Valid to</th><th>Status</th></tr></thead>
+            <tbody id="certs"></tbody>
+          </table>
+        </div>
+        <div class="kit">
+          <div><h3>Process &amp; safety</h3><ul><li>Plant operations</li><li>Pipeline &amp; storage integrity</li><li>Process monitoring</li><li>Trip &amp; interlock</li><li>Troubleshooting upsets</li><li>Process safety &amp; risk</li><li>Emergency response</li><li>Basic mechanical</li></ul></div>
+          <div><h3>Technical / IT</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Backup &amp; recovery</li><li>Network infrastructure</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (night) -->
+  <section class="night band" id="faq">
+    <div class="wrap faq">
+      <div>
+        <p class="eyebrow">FAQ</p>
+        <h2 class="h-lg" style="margin-bottom:20px">Common questions</h2>
+        <details open><summary>What can you build for my business?</summary><p>Websites that work well on phones, booking or ordering pages, and the IT around them: email and domain setup, backups and basic network support.</p></details>
+        <details><summary>Do you only do websites?</summary><p>No. I'm also open to joining projects where operations know-how and tech skills both help, and to partnering on new business ideas.</p></details>
+        <details><summary>Where are you based?</summary><p>Seria, Kuala Belait, Brunei Darussalam. I work with people across Brunei.</p></details>
+        <details><summary>What's the best way to reach you?</summary><p>WhatsApp is fastest. Use the message form below or tap "Chat on WhatsApp" in the contact section.</p></details>
+      </div>
+      <div class="qmark" aria-hidden="true"><span>?</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT (day) -->
+  <section class="day band" id="contact">
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="h-lg">Let's build something <span class="red">solid</span></h2>
+        <p class="lead">Have a project, a need or an idea? Send me a message and let's talk it through.</p>
+        <ul class="rows">
+          <li><svg class="i"><use href="#i-phone"/></svg><a class="val" href="https://wa.me/6738253050" target="_blank" rel="noopener">Chat on WhatsApp, fastest reply</a></li>
+          <li><svg class="i"><use href="#i-pin"/></svg><span class="val">Seria, Kuala Belait, Brunei</span></li>
+        </ul>
+      </div>
+      <form id="msg" novalidate>
+        <div><label for="f-name">Your name</label><input id="f-name" autocomplete="name" placeholder="Name"></div>
+        <div><label for="f-type">I'm interested in</label>
+          <select id="f-type"><option>A website or IT setup</option><option>You joining my project</option><option>Partnering on a business</option><option>Something else</option></select></div>
+        <div class="full"><label for="f-msg">Your message</label><textarea id="f-msg" placeholder="Tell me what you're building or need"></textarea></div>
+        <div class="send-row">
+          <a class="btn hot" id="send" href="https://wa.me/6738253050" target="_blank" rel="noopener">Send on WhatsApp <svg class="i"><use href="#i-arrow"/></svg></a>
+          <p>Opens WhatsApp with your message filled in. Nothing is stored on this site.</p>
+        </div>
+      </form>
+      <div class="c-pic" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="shot"><img src="assets/img/me3.JPG" alt="" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <p class="f-brand">Hakim Endy</p>
+        <p>Production Operator at SPIE ETS and the builder behind Cudola Co. Seria, Brunei.</p>
+      </div>
+      <div><h3>Explore</h3><ul><li><a href="#about">About</a></li><li><a href="#together">Services</a></li><li><a href="#work">Work</a></li><li><a href="#journey">Experience</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><a href="https://wa.me/6738253050" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    </div>
+    <div class="f-bot"><span>© <span id="yr">2026</span> Mohammad Hakim Endy Syman · Cudola Co</span><span>Off shift: photography, hiking, running, football, basketball</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* certificates */
+  var certs=[
+    ["T-BOSIET, Offshore Survival Training","","Megamas",null],
+    ["Offshore ERT Member — Further Training","OPITO 4550","Megamas","2028-05"],
+    ["Breathing Apparatus Wearer Training","FVG-18","Megamas","2028-06"],
+    ["Confined Space Entry Training","","Megamas","2028-04"],
+    ["General Rescue from Confined Space","FVG-20","Megamas","2028-08"],
+    ["Senior First Aid (Occupational First Aid & CPR)","","Megamas / BRC Academy","2028-01"],
+    ["Boat Landing Officer (BLO)","OFF-33","Megamas","2027-09"],
+    ["Shoreline Site Supervisor Course","IMO 1 equivalent","OSRL / The Nautical Institute","2027-11"]
+  ];
+  var M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],now=new Date(),h="";
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+  certs.forEach(function(c){
+    var d="Valid",s='<span class="st">Valid</span>';
+    if(c[3]){var p=c[3].split("-"),y=+p[0],m=+p[1],end=new Date(y,m,0),mo=(y-now.getFullYear())*12+(m-1-now.getMonth());
+      d=M[m-1]+" "+y;
+      if(end<now)s='<span class="st due">Expired</span>';else if(mo<12)s='<span class="st due">Renew soon</span>';}
+    h+="<tr><td>"+esc(c[0])+(c[1]?'<span class="code">'+esc(c[1])+"</span>":"")+"</td><td>"+esc(c[2])+'</td><td class="date">'+d+"</td><td>"+s+"</td></tr>";
+  });
+  document.getElementById("certs").innerHTML=h;
+  document.getElementById("yr").textContent=now.getFullYear();
+
+  /* service tabs */
+  var data={
+    build:["Your website & IT setup","Phone-friendly websites, booking and ordering pages, and IT set up properly for small businesses, cafés and shops in Brunei.",["Business websites","Booking & ordering pages","Email & domain setup","Backup & recovery"]],
+    join:["Your project or team","Someone who understands both operations and tech. I help with safety-minded processes, digital tools and getting things running day to day.",["Operations know-how","Process & safety mindset","Digital tools","Network support"]],
+    partner:["A new business idea","Have an idea and need a partner who can build the online side and put in the work? Let's sit down and talk it through.",["Joint ventures","Online presence","Launch & run"]]
+  };
+  var tabs=[].slice.call(document.querySelectorAll(".opt"));
+  function pick(t){
+    var k=t.id.replace("tab-",""),v=data[k];
+    tabs.forEach(function(b){b.setAttribute("aria-selected",b===t?"true":"false")});
+    document.getElementById("pane-h").textContent=v[0];
+    document.getElementById("pane-p").textContent=v[1];
+    document.getElementById("pane-c").innerHTML=v[2].map(function(x){return"<li>"+esc(x)+"</li>"}).join("");
+    var map={build:"A website or IT setup",join:"You joining my project",partner:"Partnering on a business"};
+    document.getElementById("f-type").value=map[k];upd();
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener("click",function(){pick(b)});
+    b.addEventListener("keydown",function(e){
+      if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();var n=tabs[(i+(e.key==="ArrowDown"?1:tabs.length-1))%tabs.length];n.focus();pick(n)}
+    });
+  });
+
+  /* whatsapp message builder */
+  var send=document.getElementById("send");
+  function upd(){
+    var n=document.getElementById("f-name").value.trim(),t=document.getElementById("f-type").value,m=document.getElementById("f-msg").value.trim();
+    var txt="Hi Hakim, "+(n?"I'm "+n+". ":"")+"I'm interested in: "+t+"."+(m?"\n\n"+m:"");
+    send.href="https://wa.me/6738253050?text="+encodeURIComponent(txt);
+  }
+  ["f-name","f-type","f-msg"].forEach(function(id){document.getElementById(id).addEventListener("input",upd)});
+  document.getElementById("msg").addEventListener("submit",function(e){e.preventDefault()});
+  upd();
+
+  /* nav highlight */
+  var links=[].slice.call(document.querySelectorAll("nav a"));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))});
+  var ticking=false;
+  function mark(){ticking=false;var idx=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<=160)idx=i});links.forEach(function(a,i){a.classList.toggle("on",i===idx)})}
+  addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(mark)}},{passive:true});
+
+})();
+</script>
+</body>
+</html>
