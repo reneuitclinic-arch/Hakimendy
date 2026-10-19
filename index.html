@@ -15,7 +15,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23F28C38'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='900' font-size='38' text-anchor='middle' fill='%230F3D3E'%3EH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..80,700..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: alternating night (black) and day (warm paper) bands; condensed uppercase headlines, flare-red accent; one flagship moment per band */
 :root{
@@ -70,7 +70,7 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stro
 .band{padding-block:clamp(56px,8vw,96px)}
 
 /* nav */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(15,61,62,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(15,61,62,.97);border-bottom:1px solid var(--line-d)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding-block:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-stretch:75%;font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:.02em}
 .brand b{display:grid;place-items:center;width:30px;height:30px;border-radius:6px;background:var(--acc-btn);color:var(--on-acc);font-size:.95rem}
@@ -327,7 +327,7 @@ footer{background:var(--foot);color:var(--snow)}
 footer .wrap{padding-block:48px 28px}
 .f-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,.6fr));gap:28px}
 .f-top>*{min-width:0}
-.f-brand{font-family:var(--f-display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(2rem,5vw,3.2rem);line-height:.95;margin:0}
+.f-brand{font-family:var(--f-display);font-stretch:75%;font-weight:900;text-transform:uppercase;font-size:clamp(2rem,5vw,3.2rem);line-height:.95;margin:0}
 .f-top p{margin:12px 0 0;max-width:40ch;font-size:.9rem}
 .f-top h3{margin:0 0 12px;color:var(--acc);font-family:var(--f-mono);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
 .f-top ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.9rem}
@@ -336,12 +336,14 @@ footer .wrap{padding-block:48px 28px}
 .f-bot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.3);font-size:.8rem}
 @media (max-width:640px){.f-top{grid-template-columns:1fr 1fr}.f-top>div:first-child{grid-column:1/-1}}
 
-/* motion (GSAP + Lenis); everything is visible without JS */
-html.lenis,html.lenis body{height:auto}
-html.lenis{scroll-behavior:auto}
-.lenis.lenis-stopped{overflow:clip}
-.motion .h-hero>span{overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
-.motion .h-hero .ln{display:block}
+/* light motion (CSS only) */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+@media (prefers-reduced-motion:no-preference){
+.hero-copy>*,.hero .shift{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>:nth-child(2){animation-delay:.08s}.hero-copy>:nth-child(3){animation-delay:.16s}.hero-copy>:nth-child(4){animation-delay:.24s}.hero .shift{animation-delay:.32s}
+.js-rv .rv{opacity:0;transition:opacity .5s ease}
+.js-rv .rv.in{opacity:1}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skill,.btn,.proj .thumb img{transition:none}}
 </style>
 </head>
@@ -553,7 +555,7 @@ html.lenis{scroll-behavior:auto}
           <h3>GramGroup</h3><p>Corporate group website (no longer online)</p>
         </div>
         <div class="proj">
-          <div class="thumb"><span>Enevo</span><img src="assets/img/portfolio/Web 4.png" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <div class="thumb"><span>Enevo</span><img src="assets/img/portfolio/Web 4.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
           <h3>Enevo Brunei</h3><p>Company website (no longer online)</p>
         </div>
         <div class="proj">
@@ -759,93 +761,17 @@ html.lenis{scroll-behavior:auto}
 
 })();
 </script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/lenis.min.js"></script>
 <script>
 (function(){
-  if(!window.gsap||!window.ScrollTrigger) return;
-  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  gsap.registerPlugin(ScrollTrigger);
-  var root=document.documentElement; root.classList.add("motion");
-  var header=document.querySelector("header.top");
-
-  /* smooth scrolling */
-  var lenis=null;
-  if(window.Lenis){
-    lenis=new Lenis({lerp:0.1,wheelMultiplier:1});
-    lenis.on("scroll",ScrollTrigger.update);
-    gsap.ticker.add(function(t){lenis.raf(t*1000)});
-    gsap.ticker.lagSmoothing(0);
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){
-      a.addEventListener("click",function(e){
-        var id=a.getAttribute("href"); var el=id.length>1?document.querySelector(id):null;
-        if(!el&&id!=="#top") return;
-        e.preventDefault();
-        lenis.scrollTo(id==="#top"?0:el,{offset:-(header?header.offsetHeight:0)+1,duration:1.2});
-        history.replaceState(null,"",id);
-      });
-    });
-  }
-
-  /* hero intro: headline lines rise out of a mask */
-  document.querySelectorAll(".h-hero>span").forEach(function(sp){sp.innerHTML='<span class="ln">'+sp.innerHTML+"</span>"});
-  var intro=gsap.timeline({defaults:{ease:"power3.out"}});
-  intro.from(".hero .eyebrow",{y:16,autoAlpha:0,duration:.6})
-       .from(".h-hero .ln",{yPercent:110,duration:1,stagger:.12},"-=.3")
-       .from(".hero .lead, .hero .cta>*, .shift",{y:20,autoAlpha:0,duration:.7,stagger:.08},"-=.55")
-       .from(".portrait",{autoAlpha:0,duration:1.2},0.2)
-       .from(".portrait img",{scale:1.08,duration:1.6,ease:"power2.out"},0.2)
-       .from(".stroke",{scaleX:0,transformOrigin:"0% 50%",duration:.9,stagger:.15,ease:"power4.out"},0.9)
-       .from(".orbits, .rail",{autoAlpha:0,duration:1.4},0.4);
-
-  /* slow orbit spin + gentle photo parallax */
-  gsap.to(".orbits ellipse, .orbits .dot",{rotation:360,svgOrigin:"300 300",duration:120,ease:"none",repeat:-1});
-  gsap.to(".portrait img",{yPercent:7,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
-
-  /* count-up numbers */
-  document.querySelectorAll(".statsbar strong, .kpis strong, .about-pic .badge strong").forEach(function(el){
-    var node=[].find.call(el.childNodes,function(n){return n.nodeType===3&&/\d/.test(n.nodeValue)});
-    if(!node) return;
-    var end=parseInt(node.nodeValue,10), o={v:0};
-    gsap.to(o,{v:end,duration:1.4,ease:"power2.out",
-      scrollTrigger:{trigger:el,start:"top 90%",once:true},
-      onUpdate:function(){node.nodeValue=String(Math.round(o.v))+node.nodeValue.replace(/^\d+/,"")}});
-  });
-
-  /* section headings */
-  gsap.utils.toArray("main section .eyebrow, .h-lg, .sec-row .side, .lead:not(.hero .lead), .about p").forEach(function(el){
-    if(el.closest(".hero")) return;
-    gsap.from(el,{y:28,autoAlpha:0,duration:.8,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}});
-  });
-
-  /* cards and list items, staggered as they arrive */
-  var groups=".statsbar ul, .clients li, .about-pic, .kpis li, .skill, .opts li, .pane, .stack>*, .proj, .tl li, .hl>div, .detail>div, .table-scroll, .kit>div, details, .rows li, form>*, .c-pic";
-  gsap.set(groups,{autoAlpha:0,y:36});
-  ScrollTrigger.batch(groups,{start:"top 90%",once:true,
-    onEnter:function(b){gsap.to(b,{autoAlpha:1,y:0,duration:.8,stagger:.08,ease:"power3.out",overwrite:true})}});
-
-  /* timeline nodes pop as you reach them */
-  gsap.from(".tl .node",{scale:.4,duration:.6,stagger:.12,ease:"back.out(2)",scrollTrigger:{trigger:".tl",start:"top 85%",once:true}});
-
-  /* service tabs: soften the content swap */
-  document.querySelectorAll(".opt").forEach(function(b){
-    b.addEventListener("click",function(){gsap.fromTo("#pane>*",{y:12,autoAlpha:0},{y:0,autoAlpha:1,duration:.45,stagger:.05,ease:"power2.out",overwrite:true})});
-  });
-
-  /* recalculate when the page height changes (fonts, images); never leave anything hidden at the page end */
-  var rt; function refresh(){clearTimeout(rt);rt=setTimeout(function(){ScrollTrigger.refresh()},150)}
-  addEventListener("load",refresh);
-  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(refresh);
-  if(window.ResizeObserver) new ResizeObserver(refresh).observe(document.body);
-  var flushed=false;
-  function flush(){
-    if(flushed) return;
-    if(innerHeight+scrollY < document.documentElement.scrollHeight-60) return;
-    flushed=true;
-    gsap.to(gsap.utils.toArray(groups).filter(function(e){return +getComputedStyle(e).opacity<1}),{autoAlpha:1,y:0,duration:.6,stagger:.05,overwrite:true});
-  }
-  addEventListener("scroll",flush,{passive:true});
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var els=document.querySelectorAll(".band .h-lg,.statsbar li,.skill,.proj,.journey,.about .shot,.faq .q,.contact,.together");
+  if(!els.length)return;
+  document.documentElement.classList.add("js-rv");
+  var io=new IntersectionObserver(function(en){
+    var n=0;
+    en.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;t.style.transitionDelay=(n++*70)+"ms";t.classList.add("in");io.unobserve(t);});
+  },{rootMargin:"0px 0px -40px 0px"});
+  els.forEach(function(el){el.classList.add("rv");io.observe(el);});
 })();
 </script>
 </body>
